@@ -17,10 +17,10 @@ let requiredRange3 = [200, null];
 
 const myFilter = (requiredRange, courses) => {
     const result = courses.filter(course => {
-            const minRange = requiredRange[0] == null ? -Infinity : requiredRange[0];
-            const maxRange = requiredRange[1] == null ? Infinity : requiredRange[1];
-            const minPrice = course.prices[0] == null ? -Infinity : course.prices[0];
-            const maxPrice = course.prices[1] == null ? Infinity : course.prices[1];
+            const minRange = requiredRange[0] === null ? -Infinity : requiredRange[0];
+            const maxRange = requiredRange[1] === null ? Infinity : requiredRange[1];
+            const minPrice = course.prices[0] === null ? -Infinity : course.prices[0];
+            const maxPrice = course.prices[1] === null ? Infinity : course.prices[1];
             return minRange <= maxPrice && maxRange >= minPrice
         }
     );
